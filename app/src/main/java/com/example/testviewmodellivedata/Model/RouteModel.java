@@ -1,6 +1,18 @@
 package com.example.testviewmodellivedata.Model;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.ForeignKey;
+
+
+@Entity(tableName = "Route", foreignKeys = @ForeignKey(entity = ParcelModel.class,
+        parentColumns ="id",
+        childColumns = "parcelID"
+))
 public class RouteModel {
+
+    @ColumnInfo(name = "parcelID")
+    private int parcelID;
 
     private String c_id;
     private String account;
@@ -16,10 +28,9 @@ public class RouteModel {
     private String freq;
     private String stopNextDate;
 
-    public RouteModel() {
-    }
 
-    public RouteModel(String c_id, String account, String num, String type, String mon, String tue, String wed, String thu, String fri, String sat, String sun, String freq, String stopNextDate) {
+    public RouteModel(int parcelID, String c_id, String account, String num, String type, String mon, String tue, String wed, String thu, String fri, String sat, String sun, String freq, String stopNextDate) {
+        this.parcelID = parcelID;
         this.c_id = c_id;
         this.account = account;
         this.num = num;
@@ -85,5 +96,9 @@ public class RouteModel {
 
     public String getStopNextDate() {
         return stopNextDate;
+    }
+
+    public int getParcelID() {
+        return parcelID;
     }
 }

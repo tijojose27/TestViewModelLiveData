@@ -37,20 +37,15 @@ public class ParcelDetailsFragment extends Fragment {
     private RecyclerView listDetailsRecyclerView;
     private RecyclerView.LayoutManager layoutManager;
 
-    LinearLayout buttonPanel;
-
-    private ArrayList<ParcelModel> parcelList;
 
     public ParcelDetailsFragment() {
         // Required empty public constructor
-        parcelList = new ArrayList<>();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.parcel_list, container, false);
-
         listDetailsRecyclerView = view.findViewById(R.id.listRecyclerView);
 
         return view;

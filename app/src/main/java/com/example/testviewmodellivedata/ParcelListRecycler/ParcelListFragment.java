@@ -49,6 +49,23 @@ public class ParcelListFragment extends Fragment {
         parcelList = new ArrayList<>();
     }
 
+    private View.OnClickListener onItemClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            //TODO: Step 4 of 4: Finally call getTag() on the view.
+            // This viewHolder will have all required values.
+            RecyclerView.ViewHolder viewHolder = (RecyclerView.ViewHolder) view.getTag();
+            int position = viewHolder.getAdapterPosition();
+            // viewHolder.getItemId();
+            // viewHolder.getItemViewType();
+            // viewHolder.itemView;
+            ParcelModel thisItem = parcelViewModel.getParcelLiveData().getValue().get(position);
+            parcelViewModel.updateParcel(thisItem);
+            Toast.makeText(getActivity(), "You Clicked: ", Toast.LENGTH_SHORT).show();
+        }
+    };
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -58,7 +75,7 @@ public class ParcelListFragment extends Fragment {
 
         listRecyclerView = view.findViewById(R.id.listRecyclerView);
         buttonLayout = view.findViewById(R.id.buttonPanel);
-        buttonLayout.setVisibility(View.VISIBLE);
+//        buttonLayout.setVisibility(View.VISIBLE);
 
         return view;
 
@@ -83,6 +100,13 @@ public class ParcelListFragment extends Fragment {
 //                runLayoutAnimation(listRecyclerView);
             }
         });
+
+        adapter.setOnItemClickListener(onItemClickListener);
+
+//
+//        int position = viewHolder.getAdapterPosition();
+//        parcelViewModel.updateParcel(adapter.getParcelAt(position));
+//        Toast.makeText(getActivity(), "UPDATED", Toast.LENGTH_LONG).show();
 
 //        FrameLayout.LayoutParams frameLayout = new FrameLayout.LayoutParams(
 //                FrameLayout.LayoutParams.MATCH_PARENT,
@@ -124,27 +148,27 @@ public class ParcelListFragment extends Fragment {
 
         //IF YOU WANT SWIPE GESTURES HERE
 
-        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
-            @Override
-            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
-                return false;
-            }
-
-            @Override
-            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-                if(direction==ItemTouchHelper.LEFT) {
-                    parcelViewModel.deleteParcel(adapter.getParcelAt(viewHolder.getAdapterPosition()));
-                    Toast.makeText(getActivity(), "DELETED", Toast.LENGTH_LONG).show();
-                    Log.e("FROM PARCEL list", "REMOVED PARCEL LIST");
-                }else{
-                    parcelViewModel.updateParcel(adapter.getParcelAt(viewHolder.getAdapterPosition()));
-                    Toast.makeText(getActivity(), "UPDATED", Toast.LENGTH_LONG).show();
-                }
-//                runLayoutAnimation(listRecyclerView);
-            }
-
-
-        }).attachToRecyclerView(listRecyclerView);
+//        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+//            @Override
+//            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+//                return false;
+//            }
+//
+//            @Override
+//            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+//                if(direction==ItemTouchHelper.LEFT) {
+//                    parcelViewModel.deleteParcel(adapter.getParcelAt(viewHolder.getAdapterPosition()));
+//                    Toast.makeText(getActivity(), "DELETED", Toast.LENGTH_LONG).show();
+//                    Log.e("FROM PARCEL list", "REMOVED PARCEL LIST");
+//                }else{
+//                    parcelViewModel.updateParcel(adapter.getParcelAt(viewHolder.getAdapterPosition()));
+//                    Toast.makeText(getActivity(), "UPDATED", Toast.LENGTH_LONG).show();
+//                }
+////                runLayoutAnimation(listRecyclerView);
+//            }
+//
+//
+//        }).attachToRecyclerView(listRecyclerView);
 
     }
 

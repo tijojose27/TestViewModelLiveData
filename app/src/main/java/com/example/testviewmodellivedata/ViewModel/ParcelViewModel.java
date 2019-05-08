@@ -4,7 +4,7 @@ import android.app.Application;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.example.testviewmodellivedata.JSON_CONVERTER.JSONToParcel;
+import com.example.testviewmodellivedata.Utils.JSONToParcel;
 import com.example.testviewmodellivedata.Model.ParcelModel;
 
 import java.io.IOException;

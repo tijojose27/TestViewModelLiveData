@@ -1,11 +1,20 @@
 package com.example.testviewmodellivedata.Model;
 
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.util.ArrayList;
 
+@Entity(tableName = "Parcel")
 public class ParcelModel implements Comparable, Cloneable {
 
+    @PrimaryKey
+    @ColumnInfo(name = "id")
     private int id;
+
     private String c_id;
     private String account;
     private String district;
@@ -22,9 +31,6 @@ public class ParcelModel implements Comparable, Cloneable {
     private Boolean is_selected;
 
     private ArrayList<RouteModel> routes;
-
-    public ParcelModel() {
-    }
 
     public ParcelModel(int id, String c_id, String account, String district, String billarea, String type, String houseNumber, String street1, String street2, String city, String zip, String state, String lat, String lon, Boolean is_selected) {
         this.id = id;
@@ -47,8 +53,6 @@ public class ParcelModel implements Comparable, Cloneable {
     public void setRoutes(ArrayList<RouteModel> routes) {
         this.routes = routes;
     }
-
-
 
     public ArrayList<RouteModel> getRoutes() {
         return routes;

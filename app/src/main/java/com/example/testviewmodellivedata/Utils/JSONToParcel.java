@@ -1,4 +1,4 @@
-package com.example.testviewmodellivedata.JSON_CONVERTER;
+package com.example.testviewmodellivedata.Utils;
 
 import android.util.Log;
 
@@ -59,7 +59,7 @@ public class JSONToParcel {
                         String sun = object2.getString("sun");
                         String freq = object2.getString("freq");
                         String stopNextDate = object2.getString("stopNextDate");
-                        routeModelArrayList.add(new RouteModel(c_id, account, num, type, mon, tue, wed, thu, fri, sat, sun, freq, stopNextDate));
+                        routeModelArrayList.add(new RouteModel(i, c_id, account, num, type, mon, tue, wed, thu, fri, sat, sun, freq, stopNextDate));
                     }
                     currParcelModel.setRoutes(routeModelArrayList);
                 }

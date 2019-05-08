@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="15dp"
+    android:translationZ="10dp"
+    android:background="@drawable/customborder"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="10sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:id="@+id/parcel_detail_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:baselineAligned="false">
+
+            <TextView
+                android:id="@+id/detail_list_recipient_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:text="The Coorporate offices of the woodlands of waste connections \n 1001 Waterway Place Dr near the mall \nThe woodlands, Texas - 77003"
+                android:orientation="vertical"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary">
+            </TextView>
+
+            <TextView
+                android:id="@+id/account_info_container"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                tools:text="4014-13474-003121   RESIDENTIAL   ACTIVE">
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/detail_list_route"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:background="#E1E2E1"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/misc_notes"
+                    android:text="@string/operator_misc_notes"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:scrollHorizontally="true"
+                    android:layout_height="0dp">
+                </TextView>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/account_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="#E1E2E1"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="28sp"
+                    android:maxLines="3"
+                    android:scrollHorizontally="true"
+                    android:text="@string/operator_account_notes">
+                </TextView>
+
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:id="@+id/expanded_actions_layout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/photo_button"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:icon="@drawable/ic_add_a_photo_black_24dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:elevation="10dp"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="0dp"
+                    app:rippleColor="@color/colorAccent"
+                    app:backgroundTint="@color/colorAccent"
+                    app:iconTint="@android:color/white"
+                    app:iconGravity="textStart"
+                    app:iconSize="80dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:icon="@drawable/ic_note_add_black_24dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:elevation="10dp"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="0dp"
+                    app:rippleColor="@color/colorAccent"
+                    app:backgroundTint="@android:color/white"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:iconGravity="textStart"
+                    app:iconSize="80dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:icon="@drawable/ic_add_black_24dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:elevation="10dp"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="0dp"
+                    app:rippleColor="@color/colorAccent"
+                    app:backgroundTint="@android:color/white"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:iconGravity="textStart"
+                    app:iconSize="80dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:icon="@drawable/ic_signature"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:elevation="10dp"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="0dp"
+                    app:rippleColor="@color/colorAccent"
+                    app:backgroundTint="@android:color/white"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:iconGravity="textStart"
+                    app:iconSize="80dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:icon="@drawable/ic_tag_faces_black_24dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:elevation="10dp"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="0dp"
+                    app:rippleColor="@color/colorAccent"
+                    app:backgroundTint="@android:color/white"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:iconGravity="textStart"
+                    app:iconSize="80dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:icon="@drawable/ic_add_black_24dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:elevation="10dp"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="0dp"
+                    app:rippleColor="@color/colorAccent"
+                    app:backgroundTint="@android:color/white"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:iconGravity="textStart"
+                    app:iconSize="80dp"/>
+
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="@string/overall"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/customborder"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp" />
+
+
+
+
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:text="@string/_95_gallon"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:background="@color/colorPrimaryDark"
+                            android:textColor="@android:color/white"
+                            android:text="@string/serviced"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:text="@string/_64_gallon"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:background="@android:color/holo_red_light"
+                            android:textColor="@android:color/white"
+                            android:text="@string/not_serviced"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:text="@string/_95_gallon"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:background="@color/colorPrimaryDark"
+                            android:textColor="@android:color/white"
+                            android:text="@string/serviced"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:text="95 GALLON"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:background="@color/colorPrimaryDark"
+                            android:textColor="@android:color/white"
+                            android:text="Serviced"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:text="95 GALLON"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:background="@color/colorPrimaryDark"
+                            android:textColor="@android:color/white"
+                            android:text="Serviced"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:text="95 GALLON"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:background="@color/colorPrimaryDark"
+                            android:textColor="@android:color/white"
+                            android:text="Serviced"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:autoSizeMaxTextSize="100sp"
+                            android:autoSizeTextType="uniform"
+                            android:text="64 GALLON"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:background="@android:color/holo_red_light"
+                            android:textColor="@android:color/white"
+                            android:text="Not serviced"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:text="95 GALLON"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:background="@color/colorPrimaryDark"
+                            android:textColor="@android:color/white"
+                            android:text="Serviced"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:text="95 GALLON"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:background="@color/colorPrimaryDark"
+                            android:textColor="@android:color/white"
+                            android:text="Serviced"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:icon="@drawable/ic_serviced"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:elevation="10dp"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="0dp"
+                    app:rippleColor="@color/colorAccent"
+                    app:backgroundTint="@android:color/white"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:iconGravity="textStart"
+                    app:iconSize="80dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:icon="@drawable/ic_notout"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:elevation="10dp"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="0dp"
+                    app:rippleColor="@color/colorAccent"
+                    app:backgroundTint="@android:color/white"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:iconGravity="textStart"
+                    app:iconSize="80dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:icon="@drawable/ic_notserviced"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:elevation="10dp"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="0dp"
+                    app:rippleColor="@color/colorAccent"
+                    app:backgroundTint="@android:color/white"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:iconGravity="textStart"
+                    app:iconSize="80dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/expand_actions"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:icon="@drawable/ic_add_black_24dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:elevation="10dp"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="0dp"
+                    app:rippleColor="@android:color/white"
+                    app:backgroundTint="@color/colorAccent"
+                    app:iconTint="@android:color/white"
+                    app:iconGravity="textStart"
+                    app:iconSize="80dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:icon="@drawable/ic_done_all_black_24dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:elevation="10dp"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="0dp"
+                    app:rippleColor="@color/colorAccent"
+                    app:backgroundTint="@android:color/white"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:iconGravity="textStart"
+                    app:iconSize="80dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:icon="@drawable/ic_timer_black_24dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:elevation="10dp"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="0dp"
+                    app:rippleColor="@color/colorAccent"
+                    app:backgroundTint="@android:color/white"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:iconGravity="textStart"
+                    app:iconSize="80dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

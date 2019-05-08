@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardElevation="15dp"
+    android:translationZ="10dp"
+    android:background="@drawable/customborder"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/detail_list_recipient_details"
+            android:layout_width="0dp"
+            android:layout_height="138dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="The Coorporate offices of the woodlands of waste connections \n 1001 Waterway Place Dr near the mall \nThe woodlands,\n Texas - 77003" />
+
+        <TextView
+            android:id="@+id/account_info_container"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="2.5"
+            android:gravity="center"
+            android:lineSpacingMultiplier="2"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/detail_list_recipient_details"
+            tools:layout_editor_absoluteX="31dp"
+            tools:text="4014-13474-003121\t\tRESIDENTIAL\t\tACTIVE" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/account_info_container">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/holo_red_light">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_bright">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/work_notes_scroll"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/account_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:scrollHorizontally="true"
+                android:text="@string/operator_account_notes"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </HorizontalScrollView>
+
+
+        <HorizontalScrollView
+            android:id="@+id/work_notes_scroll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView4"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/work_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#E1E2E1"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:scrollHorizontally="true"
+                android:text="@string/operator_account_notes"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </HorizontalScrollView>
+
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/temp_notes_scroll"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/misc_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:scrollHorizontally="true"
+                android:text="@string/operator_misc_notes"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </HorizontalScrollView>
+
+
+        <HorizontalScrollView
+            android:id="@+id/temp_notes_scroll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/temp_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E1E2E1"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:scrollHorizontally="true"
+                android:text="@string/operator_misc_notes"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_tag_faces_black_24dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="80dp"
+                app:iconTint="@color/colorAccent"
+                app:rippleColor="@color/colorAccent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_tag_faces_black_24dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="80dp"
+                app:iconTint="@color/colorAccent"
+                app:rippleColor="@color/colorAccent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_tag_faces_black_24dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="80dp"
+                app:iconTint="@color/colorAccent"
+                app:rippleColor="@color/colorAccent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_tag_faces_black_24dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="80dp"
+                app:iconTint="@color/colorAccent"
+                app:rippleColor="@color/colorAccent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_tag_faces_black_24dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="80dp"
+                app:iconTint="@color/colorAccent"
+                app:rippleColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
