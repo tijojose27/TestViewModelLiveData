@@ -6,10 +6,15 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.graphics.Typeface;
+import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.testviewmodellivedata.Model.ParcelModel;
@@ -19,8 +24,11 @@ import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class ParcelDetailsAdapter extends RecyclerView.Adapter<ParcelDetailsAdapter.ParcelDetailsViewHolder> {
@@ -37,7 +45,7 @@ public class ParcelDetailsAdapter extends RecyclerView.Adapter<ParcelDetailsAdap
         //TODO: TRY DIFFERENT LAYOUTS
 //        View view = inflater.inflate(R.layout.detail_list_item, parent, false);
 //        View view = inflater.inflate(R.layout.detail_list_item1, parent, false);
-        View view = inflater.inflate(R.layout.final_test_layout, parent, false);
+        View view = inflater.inflate(R.layout.test_1, parent, false);
         return new ParcelDetailsViewHolder(view);
     }
 
@@ -66,7 +74,6 @@ public class ParcelDetailsAdapter extends RecyclerView.Adapter<ParcelDetailsAdap
 //                holder.routeInfoLL.addView(routeTV);
             }
 //            holder.expandedLayout.setVisibility(View.GONE);
-
 
 //        final AnimatorSet animatorSet = new AnimatorSet();
 //
@@ -98,7 +105,63 @@ public class ParcelDetailsAdapter extends RecyclerView.Adapter<ParcelDetailsAdap
 //
 //            }
 //        });
+        LinearLayout.LayoutParams paramsLeft = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT);
+        paramsLeft.weight = 1;
+        paramsLeft.setMargins(3,3,3,3);
 
+        LinearLayout.LayoutParams paramsRight = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT);
+        paramsRight.weight = 1;
+        paramsRight.setMargins(3,3,3,3);
+
+        for(int i =0; i<10;i++) {
+
+            final MaterialButton containerButton = new MaterialButton(context);
+            boolean isPressed = getRandomBoolean();
+            if(isPressed){
+                containerButton.setText("Serviced");
+                containerButton.setBackgroundColor(ContextCompat.getColor(context, R.color.colorPrimary));
+            }else{
+                containerButton.setText("Not Serviced");
+                containerButton.setBackgroundColor(ContextCompat.getColor(context, R.color.colorAccent));
+            }
+
+            containerButton.setCornerRadius(10);
+            containerButton.setTextColor(ContextCompat.getColor(context, android.R.color.white));
+
+
+            TextView containerTextView = new TextView(context);
+            containerTextView.setText("95 gallon");
+            containerTextView.setGravity(Gravity.CENTER);
+
+            containerButton.setLayoutParams(paramsRight);
+            containerTextView.setLayoutParams(paramsLeft);
+
+
+            LinearLayout linearLayout = new LinearLayout(context);
+            linearLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            linearLayout.setOrientation(LinearLayout.HORIZONTAL);
+
+            linearLayout.addView(containerTextView);
+            linearLayout.addView(containerButton);
+
+            holder.containerLayout.addView(linearLayout);
+        }
+
+
+//        holder.containerScrollView.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                holder.cardView.getParent().requestDisallowInterceptTouchEvent(false);
+//                return false;
+//            }
+//        });
+
+
+    }
+
+    public boolean getRandomBoolean() {
+        Random random = new Random();
+        return random.nextBoolean();
     }
 
 
@@ -132,14 +195,18 @@ public class ParcelDetailsAdapter extends RecyclerView.Adapter<ParcelDetailsAdap
     class ParcelDetailsViewHolder extends RecyclerView.ViewHolder {
 //
         TextView accountAddressTV, accountInfoTV, miscNotesTV, accountNotesTV;
-//        LinearLayout routeInfoLL, expandedLayout;
+        LinearLayout routeInfoLL, expandedLayout, containerLayout;
 //        MaterialButton photoButton, expandButton;
-
+//        Nested containerScrollView;
+//        CardView cardView;
 
         ParcelDetailsViewHolder(@NonNull View itemView) {
             super(itemView);
+            containerLayout = itemView.findViewById(R.id.container_layout);
             accountAddressTV = itemView.findViewById(R.id.detail_list_recipient_details);
             accountInfoTV = itemView.findViewById(R.id.account_info_container);
+//            containerScrollView = itemView.findViewById(R.id.container_scrollView);
+//            cardView = itemView.findViewById(R.id.master_card);
 //            routeInfoLL = itemView.findViewById(R.id.detail_list_route);
 //            miscNotesTV = itemView.findViewById(R.id.misc_notes);
 //            accountNotesTV = itemView.findViewById(R.id.account_notes);

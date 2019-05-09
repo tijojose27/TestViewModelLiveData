@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/master_card"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/customborder"
+    android:translationZ="10dp"
+    app:cardCornerRadius="10sp"
+    app:cardElevation="15dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/parcel_detail_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_weight="0.1"
+                android:id="@+id/detail_list_recipient_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:text="The Coorporate offices of the woodlands of waste connections \n 1001 Waterway Place Dr near the mall \nThe woodlands, Texas - 77003"></TextView>
+
+            <TextView
+                android:layout_weight="0.1"
+                android:id="@+id/account_info_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:text="4014-13474-003121   RESIDENTIAL   ACTIVE"></TextView>
+
+            <LinearLayout
+                android:layout_weight="4"
+                android:id="@+id/detail_list_route"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="10dp"
+                android:background="#E1E2E1"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+            </LinearLayout>
+
+
+            <HorizontalScrollView
+                android:layout_weight="0.1"
+                android:id="@+id/horizontalScrollView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/account_notes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:scrollHorizontally="true"
+                    android:text="@string/operator_account_notes"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </HorizontalScrollView>
+
+
+            <HorizontalScrollView
+                android:layout_weight="0.1"
+                android:id="@+id/work_notes_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/work_notes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#E1E2E1"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:scrollHorizontally="true"
+                    android:text="@string/operator_account_notes"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </HorizontalScrollView>
+
+
+            <HorizontalScrollView
+                android:layout_weight="0.1"
+                android:id="@+id/horizontalScrollView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/misc_notes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:scrollHorizontally="true"
+                    android:text="@string/operator_misc_notes"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </HorizontalScrollView>
+
+
+            <HorizontalScrollView
+                android:layout_weight="0.1"
+                android:id="@+id/temp_notes_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/temp_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E1E2E1"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp"
+                    android:scrollHorizontally="true"
+                    android:text="@string/operator_misc_notes"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:elevation="10dp"
+                    app:backgroundTint="@android:color/white"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_serviced"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="80dp"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:rippleColor="@color/colorAccent" />
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:elevation="10dp"
+                    app:backgroundTint="@android:color/white"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_notout"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="80dp"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:rippleColor="@color/colorAccent" />
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:elevation="10dp"
+                    app:backgroundTint="@android:color/white"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_notserviced"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="80dp"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:rippleColor="@color/colorAccent" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/expand_actions"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:elevation="10dp"
+                    app:backgroundTint="@color/colorAccent"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_add_black_24dp"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="80dp"
+                    app:iconTint="@android:color/white"
+                    app:rippleColor="@android:color/white" />
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:elevation="10dp"
+                    app:backgroundTint="@android:color/white"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_done_all_black_24dp"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="80dp"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:rippleColor="@color/colorAccent" />
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:elevation="10dp"
+                    app:backgroundTint="@android:color/white"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_timer_black_24dp"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="80dp"
+                    app:iconTint="@color/colorPrimaryDark"
+                    app:rippleColor="@color/colorAccent" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customborder"
+                android:gravity="center"
+                android:text="@string/overall"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <ScrollView
+                android:id="@+id/container_scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:nestedScrollingEnabled="true"
+                    android:id="@+id/container_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </ScrollView>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
